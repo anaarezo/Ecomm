@@ -28,7 +28,7 @@ Após a instalação das dependências utilize o comando abaixo para subir o ser
 Para rodar o projeto com o Front-End é necessário instalar as dependências utilizando `yarn` do projeto `meli`, após a instalação para compilar o Front-End do projeto é necessário seguir os comandos abaixo:
 
 ```shell
-    $ cd meli-api
+    $ cd meli
     $ yarn start
     $ yarn sass
 ```    
