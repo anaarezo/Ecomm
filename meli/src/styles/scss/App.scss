@@ -1,0 +1,181 @@
+$inner-padding: 20px;
+$border-radius: 3px;
+$bg-gray: #F0F0F0;
+$bg-yellow: #FEE903;
+$item-list-spacing: 30px;
+
+body {
+  background-color: $bg-gray;
+}
+
+html,
+body,
+ul {
+  margin: 0px;
+  padding: 0px;
+}
+
+ul {
+  list-style: none;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.container {
+  max-width: 1024px;
+  margin: 0px auto;
+}
+
+.content {
+  margin-top: 20px;
+  background: white;
+  padding: $inner-padding * 2;
+  border-radius: 3px;
+  min-height: 500px;
+}
+
+.logo {
+  background-image: url("https://http2.mlstatic.com/ui/navigation/5.2.0/mercadolibre/logo-pt__large_plus.png");
+  background-repeat: no-repeat;
+  background-position: left center;
+  flex-basis: 160px;
+}
+
+.SearchBar {
+  background-color: $bg-yellow;
+  padding: $inner-padding;
+
+  form {
+    input {
+      border: none;
+      outline: transparent;
+      padding: $inner-padding;
+      color: #ccc;
+      flex: 1;
+      border-top-left-radius: $border-radius;
+      border-bottom-left-radius: $border-radius;
+    }
+
+    button {
+      border: none;
+      padding: $inner-padding;
+      background-color: #EFF0F1;
+      border-top-right-radius: $border-radius;
+      outline: transparent;
+      border-bottom-right-radius: $border-radius;
+    }
+  }
+}
+
+.Items {
+  .item-list {
+    .item-list-item {
+      margin-bottom: $item-list-spacing;
+      padding-bottom: $item-list-spacing;
+
+      &:not(:last-of-type) {
+        border-bottom: 1px solid $bg-gray;
+      }
+
+      a {
+        color: #1e1e1e;
+        text-decoration: none;
+        align-items: center;
+
+        &:visited {
+          color: #847b18;
+        }
+      }
+
+      .description {
+        margin-left: $item-list-spacing;
+        flex: 1;
+
+        >span {
+          display: block;
+        }
+
+        .price {
+          margin-bottom: 5px;
+        }
+
+        .currency {
+          margin-right: 5px;
+        }
+      }
+
+      .address {
+        padding-right: $inner-padding;
+        text-align: right;
+      }
+    }
+  }
+}
+
+.ItemDetail {
+  font-family: sans-serif;
+  line-height: 1.5em;
+  font-size: 14px;
+  color: #545454;
+
+  .main-column {
+    flex-basis: 100%;
+  }
+
+  .price-column {
+    flex: 1;
+  }
+
+  .price-info {
+
+    p,
+    h4,
+    h5 {
+      margin: 0px 0px 20px 0px;
+      padding: 0px;
+      font-weight: normal;
+    }
+
+    .price,
+    .title {
+      font-size: 2.2em;
+      line-height: 1em;
+    }
+
+    .title {
+      font-weight: bold;
+    }
+
+    .price {
+      margin-bottom: 40px;
+
+      .currency {
+        margin-right: 10px;
+      }
+    }
+  }
+
+  .buy-btn {
+    padding: 10px 20px;
+    background-color: #3D8EFB;
+    color: #fff;
+    border: none;
+    width: 100%;
+    border-radius: $border-radius;
+    outline: transparent;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .ItemDetail {
+    .main-column {
+      flex-basis: 75%;
+    }
+  }
+}
+
+.flex {
+  display: flex;
+}
