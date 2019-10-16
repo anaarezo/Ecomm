@@ -1,0 +1,21 @@
+.search-bar {
+  padding: 15px;
+  background: yellow;
+
+  .search-box {
+    form {
+      display: flex;
+      width: 100%;
+
+      input {
+        flex: 1;
+        outline: transparent;
+        border: 1px solid #cecece;
+      }
+
+      button {
+        margin-left: 15px;
+      }
+    }
+  }
+}
